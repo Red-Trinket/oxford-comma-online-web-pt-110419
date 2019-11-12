@@ -1,6 +1,6 @@
 def oxford_comma(array)
   if array.size > 3
-    last_item = array[array.size]
+    last_item = array[array.size].to_s
     array.pop()
   end
   if array.size == 2 
