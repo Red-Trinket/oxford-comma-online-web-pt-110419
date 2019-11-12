@@ -1,17 +1,12 @@
 def oxford_comma(array)
-  if array.size > 3
-    last_item = array[array.size].to_s
-    array.pop()
-  end
-  if array.size == 2 
-    my_string = array.join(" and ")
-  elsif array.size >= 3
-    my_string = array.join(", ")
-    my_string += ", and "
-    my_string += last_item
-    
-  else
-    my_string = array.join
-  end
-end
 
+end 
+  case array.length 
+when 1
+  "#{array[0]}"
+when 2
+  array[0..1].join(" and ")
+else 
+  array[0...-1].join(", ") << ", and #{array[-1]}"
+end 
+end  
